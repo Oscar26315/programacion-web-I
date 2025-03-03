@@ -7,6 +7,12 @@
 	<style type="text/css">
 		hgroup{
 			text-align: center;
+			font-family: Trebuchet MS;
+			background-color: #efdf00;
+			padding: 1px;
+		}
+		h1{
+			font-size: 250%;
 		}
 		td{
 			width: 300px;
@@ -14,13 +20,19 @@
 		}
 		footer{
 			text-align: right;
-
+		}
+		table{
+			margin: auto;
+		}
+		form{
+			width: 90%;
+			margin: auto;
 		}
 	</style>
 </head>
 <body>
 	<hgroup>
-		<h1>Volkswagen Potosina</h1>
+		<h1>Renault SLP</h1>
 		<h2>Compras online</h2>	
 	</hgroup>
 	<form>
@@ -58,27 +70,25 @@
 			</table>
 		</fieldset>
 		<fieldset>
-			<legend>Datos para facturar</legend>
+			<legend>Datos para facturar envío</legend>
 			<table>
 				<tr>
 					<td>
-						<label>País:</label><br>
-						<input type="radio" name="paises" id="pais1">
-						<label for="pais1"> México</label> <br>
-						<input type="radio" name="paises" id="pais2">
-						<label for="pais2"> Estados Unidos</label> <br>
-						<input type="radio" name="paises" id="pais3">
-						<label for="pais3"> Canadá</label>
+						<label for="pais">País</label><br>
+						<select size="3" name="pais">
+							<option name="paises" id="pais1">México</option>
+							<option name="paises" id="pais2">Estados Unidos</option>
+							<option name="paises" id="pais3">Canadá</option>
+						</select>
 					</td>
 
 					<td>
-						<label>Ciudad:</label><br>
-						<input type="radio" name="ciudad" id="ciudad1">
-						<label for="ciudad1"> San Luis Potosí</label> <br>
-						<input type="radio" name="ciudad" id="ciudad2">
-						<label for="ciudad2"> Monterrey</label> <br>
-						<input type="radio" name="ciudad" id="ciudad3">
-						<label for="ciudad3"> Ciudad Valles</label>
+						<label for="ciudad">Ciudad</label><br>
+						<select size="3">
+							<option name="ciudades" id="ciudades1">San Luis Potosí</option>
+							<option name="ciudades" id="ciudades2">Monterrey</option>
+							<option name="ciudades" id="ciudades3">Ciudad Valles</option><option name="ciudades" id="ciudades4">Guadalajara</option>
+						</select>
 					</td>
 					<td>
 						<label for="calle">Calle:</label> <br>
@@ -88,7 +98,7 @@
 				</tr>
 				<tr>
 					<td>
-						<label for="numcasa">Número de casa:</label>
+						<label for="numcasa">Número de casa:</label><br>
 						<input type="number" name="numcasa" id="numcasa" placeholder="Número exterior" size="30" maxlength="20">
 					</td>
 					<td>
