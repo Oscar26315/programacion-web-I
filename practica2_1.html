@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Práctica 2.1</title>
+	<style type="text/css">
+		hgroup{
+			text-align: center;
+		}
+		td{
+			width: 300px;
+			padding: 5px;
+		}
+		footer{
+			text-align: right;
+
+		}
+	</style>
+</head>
+<body>
+	<hgroup>
+		<h1>Volkswagen Potosina</h1>
+		<h2>Compras online</h2>	
+	</hgroup>
+	<form>
+		<fieldset>
+			<legend>Información general del cliente</legend>
+			<table>
+				<tr>
+					<td>
+						<label for="nombre">Nombre: </label>
+						<input type="text" name="nombre" id="nombre" placeholder="Nombre" size="30" maxlength="20" title="Nombre" required>
+					</td>
+					<td>
+						<label for="apellido1">Apellido paterno: </label>
+						<input type="text" name="apellido1" id="apellido1" placeholder="Apellido paterno" size="30" maxlength="20">
+					</td>
+					<td>
+						<label for="apellido2">Apellido materno: </label>
+						<input type="text" name="apellido2" id="apellido2" placeholder="Apellido materno" size="30" maxlength="20">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="user">Nombre de usuario: </label>
+						<input type="text" name="user" id="user" placeholder="Usuario" size="30" maxlength="20" required>
+					</td>
+					<td>
+						<label for="pass">Contraseña: </label>
+						<input type="password" name="pass" id="pass" placeholder="Contraseña" size="20" maxlength="20" required>
+					</td>
+					<td>
+						<label for="fecha">Fecha de registro: </label>
+						<input type="date" name="fecha" id="fecha"  size="30" maxlength="20">
+					</td>
+				</tr>
+			</table>
+		</fieldset>
+		<fieldset>
+			<legend>Datos para facturar</legend>
+			<table>
+				<tr>
+					<td>
+						<label>País:</label><br>
+						<input type="radio" name="paises" id="pais1">
+						<label for="pais1"> México</label> <br>
+						<input type="radio" name="paises" id="pais2">
+						<label for="pais2"> Estados Unidos</label> <br>
+						<input type="radio" name="paises" id="pais3">
+						<label for="pais3"> Canadá</label>
+					</td>
+
+					<td>
+						<label>Ciudad:</label><br>
+						<input type="radio" name="ciudad" id="ciudad1">
+						<label for="ciudad1"> San Luis Potosí</label> <br>
+						<input type="radio" name="ciudad" id="ciudad2">
+						<label for="ciudad2"> Monterrey</label> <br>
+						<input type="radio" name="ciudad" id="ciudad3">
+						<label for="ciudad3"> Ciudad Valles</label>
+					</td>
+					<td>
+						<label for="calle">Calle:</label> <br>
+						<input type="text" name="calle" id="calle" size="30" maxlength="30" placeholder="Calle">
+
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="numcasa">Número de casa:</label>
+						<input type="number" name="numcasa" id="numcasa" placeholder="Número exterior" size="30" maxlength="20">
+					</td>
+					<td>
+						<label for="col">Colonia: </label>
+						<input type="text" name="col" id="col" placeholder="Colonia" size="30" maxlength="20">
+					</td>
+					<td>
+						<label for="mail">E-mail: </label><br>
+						<input type="email" name="mail" id="mail" placeholder="E-mail" size="30" maxlength="20">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="rfc">R.F.C. : </label><br>
+						<input type="text" name="rfc" id="rfc" placeholder="R.F.C." size="30" maxlength="20">
+					</td>
+					<td>
+						<label for="cp">Código postal: </label>
+						<input type="number" name="cp" id="cp" placeholder="Código postal" size="30" maxlength="20">
+					</td>
+					<td>
+						<input type="checkbox" name="tyc" id="tyc">
+						<label for="tyc"> Acepto términos y condiciones</label><br>
+						<input type="submit" name="enviar">
+						<input type="reset" name="reset">
+					</td>
+				</tr>
+			</table>
+		</fieldset>
+	</form>
+	<br>
+	<footer>
+		Febrero 2025, SLP
+	</footer>
+</body>
+</html>
