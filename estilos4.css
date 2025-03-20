@@ -106,7 +106,7 @@ input[type="url"] {
 	border-radius: 4px;
 	padding: 9px 9px 9px 35px;
 	box-sizing: border-box;
-	background-image: url(images/icono2.png);
+	background-image: url(imagenes/icono2.png);
 	background-repeat: no-repeat;
 	transition-delay: 1s;
 	transition: width 2s ease-in-out;
