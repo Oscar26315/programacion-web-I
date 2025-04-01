@@ -39,7 +39,7 @@ footer{
 }
 
 .imagen{
-    background-image: src="images/index.jpg";
+    background-image: src="/images/index.jpg";
 }
 
 .imagen h1, h3{
@@ -47,7 +47,7 @@ footer{
 }
 
 .imagen2{
-    background-image: src="images/index2.jpg";
+    background-image: src="/images/index2.jpg";
 }
 
 .mision-container {
