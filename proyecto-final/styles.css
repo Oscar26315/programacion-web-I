@@ -1,1 +1,24 @@
+*{
+    margin: 0px;
+}
 
+html{
+    font-size: 12px; /*Para determinar los tamaños de fuente de cada elemento usen 'rem'. Aquí explica por qué: https://medium.com/@shakirulhkhan/why-should-you-not-use-px-3021aa0b5958*/
+}
+
+.barra-superior{
+    background-color: rgb(37, 68, 104);
+    position: fixed;
+    padding: 12%;
+    margin: 4vh;
+    color: aliceblue;
+}
+
+.menu-flex{
+    display: flex;
+    justify-content: flex-end;
+}
+
+footer{
+    background-color: rgb(37, 68, 104);
+}
