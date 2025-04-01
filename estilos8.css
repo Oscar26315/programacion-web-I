@@ -1,0 +1,54 @@
+
+.contenedor{
+	position: relative;
+	background: #A27B5C;
+	height: 20vh;
+}
+
+.caja1{
+	position: relative;
+	background: #143D60;
+	height: 50px;
+	left: 5vw;
+	width: 60vw;
+	top: 2px;
+}
+
+.caja2{
+	position: absolute;
+	background: #27667B;
+	height: 200px;
+	width: 200px;
+	left: 20vw;
+	top: 3vh;
+	z-index: 1;
+}
+
+.caja3{
+	position: absolute;
+	background: #A0C878;
+	height: 130px;
+	width: 130px;
+	left: 29vw;
+	top: 7vh;
+	z-index: 2;
+}
+
+.caja4{
+	position: absolute;
+	background: #DDEB9D;
+	height: 110px;
+	right: 500px;
+	left: 40vw;
+	top: 10vh;
+	z-index: 3;
+}
+
+.caja5{
+	position: fixed;
+	right: 5px;
+	bottom: 5px;
+	border: 2px solid teal;
+	width: 100px;
+	z-index: 4;
+}
