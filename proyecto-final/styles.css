@@ -37,3 +37,33 @@ footer{
     text-align: center;
     height: 20vh;
 }
+
+.imagen{
+    background-image: src="images/index.jpg";
+}
+
+.imagen h1, h3{
+    text-align: left;
+}
+
+.imagen2{
+    background-image: src="images/index2.jpg";
+}
+
+.mision-container {
+    background-color: #a8e0a8; 
+    width: 300px; 
+    padding: 20px;
+    border-radius: 10px; 
+    font-family: sans-serif; 
+    line-height: 1.6; 
+}
+
+.mision-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.mision-container p {
+    margin-bottom: 15px;
+}
