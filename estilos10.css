@@ -1,0 +1,49 @@
+body{
+	background-color: #B2E89E;
+	font-family: arial;
+}
+
+h1, h2{
+	text-align: center;
+}
+
+input{
+	display: block;
+	margin: auto;
+	padding: 8px;
+	background-color: #67AE6E;
+	border: 2.5px solid #217D5D;
+	color: #005B3B;
+	transition-duration: 0.2s;
+	border-radius: 5px;
+}
+input:hover{
+	background-color: #217D5D;
+	border: 2px solid #217D5D;
+	color: #FFFFFF;
+}
+
+.galeria{
+	display: flex;
+	width: 100vw;
+	position: relative;
+	left: 2%;
+}
+
+.imagen{
+	border: 2px solid #328E6E;
+	background-color: #FFFFFF;
+	margin: 20px;
+	border-radius: 3px;
+}
+
+.imagen img{
+	height: 20vw;
+	width: 20vw;
+	object-fit: contain;
+}
+
+#mostrar:hover ~ .galeria .imagen{
+	display: none;
+}
+
