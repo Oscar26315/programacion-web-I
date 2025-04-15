@@ -69,6 +69,7 @@ footer{
     height: auto;
     display: block;
     z-index: 0;
+    margin: none;
 }
 
 /*Título Index*/
@@ -86,27 +87,56 @@ footer{
 }
 
 /*Cuadros verdes. Usar ID para la posición de cada uno*/
-.mission {
+.bloqueCuadro{
     position: absolute;
-    background-color: #a8e0a8; 
-    padding: 20px;
-    border-radius: 10px; 
-    font-family: sans-serif; 
-    line-height: 1.6; 
-}
-.mission h2, p {
     text-align: center;
-    margin-bottom: 20px;
+    right: 10px;
+    color: azure;
+    margin: none;
+    font-family: sans-serif;
+    padding: none;
+    line-height: 1.5    em;
+    max-width: 50vw; /*Editar a 340px para dispositivos móviles!    */
+}
+.tituloCuadro{
+    font-weight: bold;
+    font-size: 1.3em;
+    margin-bottom: 1em;
+    padding: 0.3em 0.7em;
+    background-color: rgb(37, 68, 104);
+    border-radius: 100px;
+    text-align: center;
+}
+.contenidoCuadro{
+    background-color: #a8e0a8;
+    border-radius: 6px;
+    padding: 0.7em 0.9em;
 }
 #cuadroIndex1{
-    left: 10vw;
+    left: 9vw;
     top: 10vh;
-    width: 30%;
-    max-height: 90%;
+    width: 500px;
 }
 
 
 /*Mapa del index*/
 .mapa{
     align-items: center;
+}
+
+/*Sección de preguntas frecuentes*/
+#faq1{
+    top: 45vh;
+    right: 10vw;
+    width: 30%;
+}
+#faq2{
+    top: 70vh;
+    left: 10vw;
+    width: 30%;
+}
+#faq3{
+    top: 95vh;
+    right: 10vw;
+    width: 30%;
 }

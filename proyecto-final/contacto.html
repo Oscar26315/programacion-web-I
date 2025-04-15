@@ -23,17 +23,64 @@
             </div>
         </header>
 
-        <div >
-            Cuerpo con imagenes chidas y texto aaaaaaaaaa
+
+        <div style="height: 10vw; display: block; color: white;"></div>
+
+        
+
+        <div class="redescont" style="margin: 10px 5vw;">
+            <h2>Datos de contacto y redes sociales</h2>
+            <div class="redes"> 
+                <ul>
+                    <li> <a href=""> Finanzasparati@gmail.com </a> </li>
+                    <li> <a href="https://www.instagram.com/upslp_oficial/?hl=es"> Instagram </a> </li>
+                    <li> <a href="https://www.facebook.com/upslp/?locale=es_LA"> Facebook </a> </li>
+                    <li> <a href="https://x.com/UPSLP_MX"> Twitter </a> </li>
+                    <li> <a href="https://mx.linkedin.com/school/universidad-polit%C3%A9cnica-de-san-luis-potos%C3%AD/"> Linkedln </a> </li>
+                    <li> <a href="https://www.google.com/search?q=upslp+telefono&oq=upslp+te&gs_lcrp=EgZjaHJvbWUqBwgBEAAYgAQyBggAEEUYOTIHCAEQABiABDIICAIQABgWGB4yCAgDEAAYFhgeMggIBBAAGBYYHjIGCAUQRRg8MgYIBhBFGDwyBggHEEUYPNIBCDM1NDRqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8#"> Teléfono </a> </li>
+                     
+                </ul>
+            </div>
+            <div class="imagenredes">  
+                <img src="images/redesimagen.webp" id="redesimagen">
+            </div>
         </div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
+
+        <div>
+            <div class="tituloCuadro" style="color: azure;width: 90vw; margin: auto;" >¿Te llamaron la atención nuestros servicios? Por favor llena este siguiente formulario con tus datos personales para nosotros poder contactarte.</div>
+            <form method="post" action="" enctype="text/plain" class="contenidoCuadro" style="margin: 10px 10%; line-height: 2em;">
+                <fieldset style="padding-left: 2vw;">
+                    <legend>Información personal del solicitante</legend>
+                    <label for="nombre"> Nombre(s): </label> <br/>
+                    <input type="text" placeholder="Nombre" name="nombre" id="nombre" autofocus>
+                    <br>
+                    <label for="apellidopat"> Apellido paterno: </label> <br/>
+                    <input type="text" placeholder="Apellido paterno" name="apellidopat" id="apellidopat" autofocus>
+                    <br>
+                    <label for="apellidomat"> Apellido materno: </label> <br/>
+                    <input type="text" placeholder="Apellido materno" name="apellidomat" id="apellidomat" autofocus>
+                    <br>
+                    <label for="correo"> E-mail: </label> <br/>
+                    <input type="email" placeholder="E-mail" name="correo" id="correo" autofocus>
+                    <br>
+                    <label for="telefono"> Número celular de contacto: </label> <br/>
+                    <input type="tel" placeholder="Teléfono" name="telefono" id="telefono" autofocus>
+                    <br>
+                    <label for="tipo"> ¿Para qué tipo de persona es la asesoría?: </label> <br/>
+                    <input type="text" multiple name="tipo" id="tipo" list="tipopersona" autofocus>
+                    <datalist id="tipopersona">
+                        <option value="Persona física"> (Persona individual)</option>
+                        <option value="Persona moral"> (Empresa)</option>
+                    </datalist>
+                    <br>
+                    <label for="descripcion">Descripción breve del porque requieres de nuestros servicios (opcional)</label> </br>
+                    <textarea name="descripcion" id="descripcion"> </textarea>
+                    <br>
+                    <input type="submit" id="enviar">
+                </fieldset>
+            </form>
+        </div>
+
 
         <footer>
             <br>
