@@ -1,0 +1,41 @@
+body{
+	background-color: lightblue;
+	font-family: arial;
+}
+h1{
+	text-align: center;
+	background-color: darkcyan;
+	color: snow;
+	border-radius: 10px;
+	padding: 3px;
+	box-shadow: 3px 3px black;
+}
+form{
+	background-color: royalblue;
+	color: snow;
+	padding: 20px;
+	border-radius: 10px;
+	margin: auto;
+	width: 40%;
+	text-align: center;
+	line-height: 20px;
+	box-shadow: 3px 3px black;
+}
+form input{
+	margin: 7px;
+}
+
+h2{
+	background-color: darkcyan;
+	color: snow;
+	border-radius: 10px;
+	padding: 3px;
+	width: 20%;
+	text-align: center;
+	box-shadow: 3px 3px black;
+}
+p{
+	color: midnightblue;
+	text-shadow: 1px 1px snow;
+	margin-left: 20px;
+}
