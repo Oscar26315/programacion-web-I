@@ -1,0 +1,38 @@
+body{
+    background-color: rgb(241, 226, 254);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    text-align: center;
+    color: rgb(149, 104, 192);
+    text-shadow: 1px 1.5px black;
+}
+
+form{
+    background-color: rgb(182, 130, 230);
+    margin: auto;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 10px 10px;
+    width: 50%;
+    line-height: 30px;
+}
+
+input:hover{
+    background-color: rgb(77, 30, 140);
+    color: aliceblue;
+}
+
+#datos{
+    margin: auto;
+    text-align: center;
+    background-color: blueviolet;
+    margin-top: 50px;
+    line-height: 30px;
+    width: 30%;
+    border-radius: 15px;
+    border: 3px solid black;
+    color: aliceblue;
+    font-weight: bold;
+}
