@@ -7,6 +7,55 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="styles.css" rel="stylesheet">
+        <script type="text/javascript" src="jspdf/js/jquery/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="jspdf/js/jquery/jquery-ui-1.8.17.custom.min.js"></script>
+    <script type="text/javascript" src="jspdf/jspdf.js"></script>
+
+    <script type="text/javascript" src="jspdf/jspdf.plugin.addimage.js"></script>
+
+    <script type="text/javascript" src="jspdf/jspdf.plugin.standard_fonts_metrics.js"></script>
+    <script type="text/javascript" src="jspdf/jspdf.plugin.split_text_to_size.js"></script>
+    <script type="text/javascript" src="jspdf/jspdf.plugin.from_html.js"></script>
+
+    <script type="text/javascript">
+        function generar(event) {
+            event.preventDefault();
+            var doc = new jsPDF();
+            var Resp1 = parseInt(document.querySelector('input[name="option"]:checked')?.value)|| 0; 
+            var Resp2 = parseInt(document.querySelector('input[name="option2"]:checked')?.value)|| 0;
+            var Resp3 = parseInt(document.querySelector('input[name="option3"]:checked')?.value)|| 0;
+            var Resp4 = parseInt(document.querySelector('input[name="option4"]:checked')?.value)|| 0;
+            var Resp5 = parseInt(document.querySelector('input[name="option5"]:checked')?.value)|| 0;
+            var Resp6 = parseInt(document.querySelector('input[name="option6"]:checked')?.value)|| 0;
+            var Resp7 = parseInt(document.querySelector('input[name="option7"]:checked')?.value)|| 0;
+            var Resp8 = parseInt(document.querySelector('input[name="option8"]:checked')?.value)|| 0;
+            var Resp9 = parseInt(document.querySelector('input[name="option9"]:checked')?.value)|| 0;
+            var Resp10 = parseInt(document.querySelector('input[name="option10"]:checked')?.value)|| 0;
+            var total = Resp1 + Resp2 + Resp3 + Resp4 + Resp5 + Resp6 + Resp7 + Resp8 + Resp9 + Resp10;
+            doc.setFontSize(30); 
+            doc.setTextColor(0, 0, 0);
+            doc.text(16, 30, "Resultados de cuestionario diagnóstico");
+
+            doc.setFontSize(30); 
+            doc.setTextColor(0, 0, 0);
+            doc.text(35, 40, "de conocimientos financieros");
+
+            doc.setFontSize(20);
+            doc.setTextColor(100, 150, 0);
+            doc.text(70, 60, "Tu calificación es: " +total);
+
+            doc.setFontSize(20);
+            doc.setTextColor(100, 150, 0);
+            doc.text(60, 70, "Contestaste " +total+ "/10 correctas");
+
+            doc.setFontSize(20);
+            doc.setTextColor(100, 150, 0);
+            doc.text(58, 80, "¡No dudes en contactarnos!");
+
+            var string = doc.output("datauristring");
+            document.querySelector('iframe').src = string;
+        }
+    </script>
     </head>
 
     <body>
@@ -50,7 +99,7 @@
             <div class="tituloCuadro" style="color: azure;width: 90vw; margin: auto;" >¿Te llamaron la atención nuestros servicios? Por favor llena este siguiente formulario con tus datos personales para nosotros poder contactarte.</div>
             <form method="post" action="" enctype="text/plain" class="contenidoCuadro" style="margin: 10px 10%; line-height: 2em;">
                 <fieldset style="padding-left: 2vw;">
-                    <legend>Información personal del solicitante</legend>
+                    <legend><b/>Información personal del solicitante</b></legend>
                     <label for="nombre"> Nombre(s): </label> <br/>
                     <input type="text" placeholder="Nombre" name="nombre" id="nombre" autofocus>
                     <br>
@@ -78,9 +127,163 @@
                     <br>
                     <input type="submit" id="enviar">
                 </fieldset>
+
+
             </form>
         </div>
 
+        <div>
+
+        <div class="CuestionarioTitulo" style="color: azure;width: 90vw; margin: auto;" >Encuesta diagnóstica de conocimiento financiero</div>
+        <div class="CuestionarioInstrucciones" style="color: azure;width: 70vw; margin: 10px 10%;" >Elige la respuesta que consideres correcta, una vez terminado se te proporcionará un comprobante PDF con tu resultado.¡Suerte!</div>
+
+        <form method="post" action="" enctype="text/plain" class="ContenidoCuestionario" style="margin: 10px 10%; line-height: 2em;">
+
+                <fieldset>
+            <legend id="q1"><b/>1. ¿Qué es el interés compuesto?</b></legend>
+
+            <input type="radio" name="option" value="0" id="opc1">
+            <label for="opc1">a) Interés que se calcula solo sobre el capital inicial.</label><br>
+
+            <input type="radio" name="option" value="1" id="opc12">
+            <label for="opc12">b) Interés que se calcula sobre el capital inicial más los intereses acumulados.</label><br>
+
+            <input type="radio" name="option" value="0" id="opc13">
+            <label for="opc13">c) Una tasa fija que no varía con el tiempo.</label><br>
+
+        </fieldset>
+
+        <fieldset>
+            <legend id="q2"><b/>2. ¿Cuál es el propósito principal de un fondo de emergencia?</b></legend>
+
+            <input type="radio" name="option2" value="0" id="opc2">
+            <label for="opc2">a) Invertir en la bolsa de valores.</label><br>
+
+            <input type="radio" name="option2" value="1" id="opc22">
+            <label for="opc22">b) Cubrir gastos imprevistos sin necesidad de endeudarse.</label><br>
+
+            <input type="radio" name="option2" value="0" id="opc23">
+            <label for="opc23">c) Pagar las vacaciones anuales.</label><br>
+
+        </fieldset>
+
+        <fieldset>
+            <legend id="q3"><b/>3. ¿Qué significa "inflación"?</b></legend>
+
+            <input type="radio" name="option3" value="0" id="opc3">
+            <label for="opc3">a) Una disminución generalizada de los precios.</label><br>
+
+            <input type="radio" name="option3" value="0" id="opc32">
+            <label for="opc32">b) Un incremento en el valor de la moneda.</label><br>
+
+            <input type="radio" name="option3" value="1" id="opc33">
+            <label for="opc33">c) Un aumento generalizado y sostenido de los precios.</label><br>
+
+        </fieldset>
+
+        <fieldset>
+            <legend id="q4"><b/>4. ¿Cuál de estos es un ejemplo de "activo"?</b></legend>
+
+            <input type="radio" name="option4" value="1" id="opc4">
+            <label for="opc4">a) Un departamento que genera ingresos por alquiler.</label><br>
+
+            <input type="radio" name="option4" value="0" id="opc42">
+            <label for="opc42">b) Una deuda de tarjeta de crédito.</label><br>
+
+            <input type="radio" name="option4" value="0" id="opc43">
+            <label for="opc43">c) Un préstamo personal.</label><br>
+
+        </fieldset>
+
+        <fieldset>
+            <legend id="q5"><b/>5. ¿Qué es un "presupuesto personal"?</b></legend>
+
+            <input type="radio" name="option5" value="0" id="opc5">
+            <label for="opc5">a) Un documento para registrar solo los gastos.</label><br>
+
+            <input type="radio" name="option5" value="1" id="opc52">
+            <label for="opc52">b) Una herramienta para planificar ingresos y gastos.</label><br>
+
+            <input type="radio" name="option5" value="0" id="opc53">
+            <label for="opc53">c) Un registro de las inversiones en la bolsa.</label><br>
+
+        </fieldset>
+
+        <fieldset>
+            <legend id="q6"><b/>6. ¿Cuál es la ventaja de diversificar inversiones?</b></legend>
+
+            <input type="radio" name="option6" value="1" id="opc6">
+            <label for="opc6">a) Reducir el riesgo al distribuir el dinero en diferentes activos.</label><br>
+
+            <input type="radio" name="option6" value="0" id="opc62">
+            <label for="opc62">b) Ganar siempre más dinero que con una sola inversión.</label><br>
+
+            <input type="radio" name="option6" value="0" id="opc63">
+            <label for="opc63">c) Evitar por completo cualquier pérdida financiera.</label><br>
+
+        </fieldset>
+
+        <fieldset>
+            <legend id="q7"><b/>7. ¿Qué mide el "score crediticio"?</b></legend>
+
+            <input type="radio" name="option7" value="0" id="opc7">
+            <label for="opc7">a) La cantidad de dinero que tienes en el banco.</label><br>
+
+            <input type="radio" name="option7" value="0" id="opc72">
+            <label for="opc72">b) El número de tarjetas de crédito que posees.</label><br>
+
+            <input type="radio" name="option2" value="1" id="opc73">
+            <label for="opc73">c) La historía crediticia y capacidad de pagar deudas. </label><br>
+
+        </fieldset>
+
+        <fieldset>
+            <legend id="q8"><b/>8. ¿Qué es un "CDT" (Certificado de Depósito a Término)?</b></legend>
+
+            <input type="radio" name="option8" value="0" id="opc8">
+            <label for="opc8">a) Un tipo de tarjeta de débito.</label><br>
+
+            <input type="radio" name="option8" value="1" id="opc82">
+            <label for="opc82">b) Un producto financiero que paga intereses por dejar dinero en el banco un tiempo fijo.</label><br>
+
+            <input type="radio" name="option8" value="0" id="opc83">
+            <label for="opc83">c) Un certificado que otorga el banco cuando llegas a la cantidad de depósitos necesarios para ser cliente especial.</label><br>
+
+        </fieldset>
+
+        <fieldset>
+            <legend id="q9"><b/>9. ¿Qué conviene más para ahorrar a largo plazo?</b></legend>
+
+            <input type="radio" name="option9" value="1" id="opc9">
+            <label for="opc9">a) Invertir en instrumentos con interés compuesto.</label><br>
+
+            <input type="radio" name="option9" value="0" id="opc92">
+            <label for="opc92">b) Dejar el dinero en una cuenta corriente.</label><br>
+
+            <input type="radio" name="option9" value="0" id="opc93">
+            <label for="opc93">c) Aprovechar cuando el mercado es volátil.</label><br>
+
+        </fieldset>
+
+        <fieldset>
+            <legend id="q10"><b/>10. ¿Qué es la "tasa APR" en una tarjeta de crédito?</b></legend>
+
+            <input type="radio" name="option10" value="0" id="opc10">
+            <label for="opc10">a) El monto mínimo a pagar mensualmente.</label><br>
+
+            <input type="radio" name="option10" value="0" id="opc102">
+            <label for="opc102">b) Un descuento por pagar antes de la fecha límite.</label><br>
+
+            <input type="radio" name="option10" value="1" id="opc103">
+            <label for="opc103">c) La tasa anual que incluye intereses y cargos por financiamiento.</label><br>
+
+        </fieldset>
+        <button type="submit" onclick="generar(event)">Enviar resultados</button>
+    </form>
+    </div>
+    <div id="ResultadosPDF">
+        <iframe src="" frameborder="0" width="500" height="500"></iframe>
+    </div>
 
         <footer>
             <br>
