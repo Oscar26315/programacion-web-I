@@ -1,0 +1,27 @@
+
+
+.bloqueCuadro{
+    position: absolute;
+    text-align: center;
+    right: 10px;
+    color: azure;
+    margin: none;
+    font-family: sans-serif;
+    padding: none;
+    max-width: 30vw; /*Editar a 340px para dispositivos móviles!    */
+}
+
+.tituloCuadro{
+    font-weight: bold;
+    font-size: 1.3em;
+    margin-bottom: 1em;
+    padding: 0.3em 0.7em;
+    background-color: rgb(37, 68, 104);
+    border-radius: 100px;
+}
+
+.contenidoCuadro{
+    background-color: #a8e0a8;
+    border-radius: 6px;
+    padding: 0.3em 0.3em;
+}

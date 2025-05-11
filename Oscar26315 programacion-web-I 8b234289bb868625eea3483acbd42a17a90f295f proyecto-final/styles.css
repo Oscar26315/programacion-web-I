@@ -1,0 +1,174 @@
+/*Configuración básica*/
+body {
+    font-family: sans-serif;
+    color: #333; 
+}
+*{
+    margin: 0px;
+    padding: 0%;
+    z-index: 2;
+}
+.container {
+    position: relative;
+    text-align: center;
+}
+h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    color: black;
+}
+p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: black;
+}
+
+/*Cosas de la barra superior*/
+.barra-superior{
+    display: flex;
+    background-color: rgb(37, 68, 104);
+    position: fixed;
+    padding: 2% 1%;
+    margin: 2%;
+    width: 94%;
+    max-width: 94%;
+    align-items: center;
+    justify-content: flex-end;
+    border-radius: 300px;
+    z-index: 3;
+}
+.flex-menu{
+    display: flex;
+    justify-content: flex-end;
+}
+.flex-menu a{
+    text-decoration: none;
+    margin-right: 6.5vw;
+    font-size: 1.5rem;
+    color: aliceblue;
+}
+/*Terminan cosas de la barra superior*/
+
+/*Partes. Index (pero puede usarse en otras secciones)*/
+.parte1{
+    position: relative;
+}
+.parte2{
+    position: relative;
+}
+footer{
+    background-color: rgb(37, 68, 104);
+    color: aliceblue;
+    text-align: center;
+    height: 20vh;
+}
+
+.background-image {
+    position: relative;
+    width: 100%; /* Ajusta el ancho de la imagen */
+    height: auto;
+    display: block;
+    z-index: 0;
+    margin: none;
+}
+
+/*Título Index*/
+.title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%; /* Ajusta el ancho del contenido */
+    color: black; 
+    text-align: right;
+}
+.quote {
+    font-size: 1.5em;  
+}
+
+/*Cuadros verdes. Usar ID para la posición de cada uno*/
+.bloqueCuadro{
+    position: absolute;
+    text-align: center;
+    right: 10px;
+    color: azure;
+    margin: none;
+    font-family: sans-serif;
+    padding: none;
+    line-height: 1.5    em;
+    max-width: 50vw; /*Editar a 340px para dispositivos móviles!    */
+}
+.tituloCuadro{
+    font-weight: bold;
+    font-size: 1.3em;
+    margin-bottom: 1em;
+    padding: 0.3em 0.7em;
+    background-color: rgb(37, 68, 104);
+    border-radius: 100px;
+    text-align: center;
+}
+.contenidoCuadro{
+    background-color: #a8e0a8;
+    border-radius: 6px;
+    padding: 0.7em 0.9em;
+}
+#cuadroIndex1{
+    left: 9vw;
+    top: 10vh;
+    width: 500px;
+}
+
+.CuestionarioTitulo{ 
+    font-weight: bold;
+    font-size: 1.3em;
+    margin-bottom: 1em;
+    padding: 0.3em 0.7em;
+    background-color: rgb(37, 68, 104);
+    border-radius: 100px;
+    text-align: center;
+}
+
+.CuestionarioInstrucciones{ 
+    font-weight: bold;
+    font-size: 1em;
+    margin-bottom: 1em;
+    padding: 0.3em 2.7em;
+    background-color: rgb(37, 68, 104);
+    border-radius: 100px;
+    text-align: center;
+}
+
+.ContenidoCuestionario{
+    background-color: #a8e0a8;
+    border-radius: 6px;
+    padding: 0.7em 0.9em;
+}
+
+.ResultadosPDF {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Mapa del index*/
+.mapa{
+    align-items: center;
+}
+
+/*Sección de preguntas frecuentes*/
+#faq1{
+    top: 45vh;
+    right: 10vw;
+    width: 30%;
+}
+#faq2{
+    top: 70vh;
+    left: 10vw;
+    width: 30%;
+}
+#faq3{
+    top: 95vh;
+    right: 10vw;
+    width: 30%;
+}
