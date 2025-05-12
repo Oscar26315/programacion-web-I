@@ -5,43 +5,246 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Formulario</title>
 	<!--Almacenamiento local-->
-	<link rel="stylesheet" type="text/css" href="fomrStyles.css">
-	<script type="text/javascript" src="jspdf/js/jquery/jquery-1.7.1.min.js"></script>
-	<script type="text/javascript" src="jspdf/js/jquery/jquery-ui-1.8.17.custom.min.js"></script>
-	<script type="text/javascript" src="jspdf/jspdf.js"></script>
-	<script type="text/javascript" src="jspdf/jspdf.plugin.addimage.js"></script>
-	<script type="text/javascript" src="jspdf/jspdf.plugin.standard_fonts_metrics.js"></script>
-	<script type="text/javascript" src="jspdf/jspdf.plugin.split_text_to_size.js"></script>
-	<script type="text/javascript" src="jspdf/jspdf.plugin.from_html.js"></script>
+	<link rel="stylesheet" type="text/css" href="formStyles.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="styles.css" rel="stylesheet">
+        <script type="text/javascript" src="jspdf/js/jquery/jquery-1.7.1.min.js"></script>
+        <script type="text/javascript" src="jspdf/js/jquery/jquery-ui-1.8.17.custom.min.js"></script>
+        <script type="text/javascript" src="jspdf/jspdf.js"></script>
 
-	<script src="https://www.gstatic.com/charts/loader.js"></script><!--Gráficas-->
+        <script type="text/javascript" src="jspdf/jspdf.plugin.addimage.js"></script>
 
-	<script src="localstorage.js"></script><!--Almacenamiento local-->
+        <script type="text/javascript" src="jspdf/jspdf.plugin.standard_fonts_metrics.js"></script>
+        <script type="text/javascript" src="jspdf/jspdf.plugin.split_text_to_size.js"></script>
+        <script type="text/javascript" src="jspdf/jspdf.plugin.from_html.js"></script>
 
-	<script type="text/javascript">
-		function generar(){
-			var doc = new jsPDF();
+        <script type="text/javascript">
+            function generar(event) {
+                event.preventDefault();
+                var doc = new jsPDF();
+                var Resp1 = parseInt(document.querySelector('input[name="option"]:checked')?.value)|| 0; 
+                var Resp2 = parseInt(document.querySelector('input[name="option2"]:checked')?.value)|| 0;
+                var Resp3 = parseInt(document.querySelector('input[name="option3"]:checked')?.value)|| 0;
+                var Resp4 = parseInt(document.querySelector('input[name="option4"]:checked')?.value)|| 0;
+                var Resp5 = parseInt(document.querySelector('input[name="option5"]:checked')?.value)|| 0;
+                var Resp6 = parseInt(document.querySelector('input[name="option6"]:checked')?.value)|| 0;
+                var Resp7 = parseInt(document.querySelector('input[name="option7"]:checked')?.value)|| 0;
+                var Resp8 = parseInt(document.querySelector('input[name="option8"]:checked')?.value)|| 0;
+                var Resp9 = parseInt(document.querySelector('input[name="option9"]:checked')?.value)|| 0;
+                var Resp10 = parseInt(document.querySelector('input[name="option10"]:checked')?.value)|| 0;
+                var total = Resp1 + Resp2 + Resp3 + Resp4 + Resp5 + Resp6 + Resp7 + Resp8 + Resp9 + Resp10;
+                doc.setFontSize(30); 
+                doc.setTextColor(0, 0, 0);
+                doc.text(40, 30, "Resultados del Cuestionario:");
 
-			doc.setFontSize(38);
-			doc.setTextColor(100,150,0);
-			doc.text(30,30,"Hola, Mundo!");
+                doc.setFontSize(20);
+                doc.setTextColor(100, 150, 0);
+                doc.text(70, 60, "Tu calificación es: " +total);
 
-			doc.setFontSize(25);
-			doc.setTextColor(10,160,0);
-			doc.text(30,50,"Bienvenido a JavaScript");
+                doc.setFontSize(20);
+                doc.setTextColor(100, 150, 0);
+                doc.text(60, 70, "Contestaste " +total+ "/10 preguntas");
+				doc.text(87, 80, "correctas!");
 
-			var string = doc.output('datauristring');
 
-			$('iframe').attr('src', string);
-		}
-	</script>
+                var string = doc.output("datauristring");
+                document.querySelector('iframe').src = string;
+
+                // Creación de la gráfica
+                var data = new google.visualization.DataTable();
+                data.addColumn('string', 'Veredicto');
+                data.addColumn('number', 'Cantidad');
+                data.addRows([
+                ['Correctas', total],
+                ['Incorrectas', 10-total],
+                ]);
+
+                // Set chart options
+                var options = {'title':'Resultados',
+                            'width':600,
+                            'height':400,
+                            pieHole: 0.2,
+                            slices: {
+                                0: { color: 'green' },
+                                1: { color: 'rgb(199, 28, 16)' }
+                            }};
+
+                // Instantiate and draw our chart, passing in some options.
+                var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+                chart.draw(data, options);
+            }
+        </script>
+        <!--Load the AJAX API-->
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script type="text/javascript">
+
+        // Load the Visualization API and the corechart package.
+        google.charts.load('current', {'packages':['corechart']});
+
+        // Set a callback to run when the Google Visualization API is loaded.
+        //google.charts.setOnLoadCallback(drawChart);
+
+        // Callback that creates and populates a data table,
+        // instantiates the pie chart, passes in the data and
+        // draws it.
+
+        </script>
 </head>
 <body>
-	<h1>Formulario de x</h1>
-	<h3>Responde las preguntas correctamente</h3>
-	<form>
-		
+	<h1>Formulario sobre Lego</h1>
+	<h3>Responde las preguntas sobre Lego para averiguar cuánto sabes</h3>
+	
+    <form method="post" action="" enctype="text/plain" class="ContenidoCuestionario" style="margin: 10px 10%; line-height: 2em;">
+
+	<fieldset>
+		<legend id="q1"><b/>1. ¿En qué país surgió la compañía?</b></legend>
+
+		<input type="radio" name="option" value="0" id="opc1">
+		<label for="opc1">a) Suecia</label><br>
+
+		<input type="radio" name="option" value="1" id="opc12">
+		<label for="opc12">b) Dinamarca</label><br>
+
+		<input type="radio" name="option" value="0" id="opc13">
+		<label for="opc13">c) Suiza</label><br>
+
+	</fieldset>
+
+	<fieldset>
+		<legend id="q2"><b/>2. ¿En los principios de la compañía, qué clase de juguetes hacían?</b></legend>
+
+		<input type="radio" name="option2" value="0" id="opc2">
+		<label for="opc2">a) Cartas</label><br>
+
+		<input type="radio" name="option2" value="1" id="opc22">
+		<label for="opc22">b) Juguetes de madera</label><br>
+
+		<input type="radio" name="option2" value="0" id="opc23">
+		<label for="opc23">c) Muñecos</label><br>
+
+	</fieldset>
+
+	<fieldset>
+		<legend id="q3"><b/>3. ¿De cuántas formas se pueden juntar seis bloques de 2x4?</b></legend>
+
+		<input type="radio" name="option3" value="0" id="opc3">
+		<label for="opc3">a) 10,292</label><br>
+
+		<input type="radio" name="option3" value="0" id="opc32">
+		<label for="opc32">b) 12,232,212.</label><br>
+
+		<input type="radio" name="option3" value="1" id="opc33">
+		<label for="opc33">c) 915,103,765</label><br>
+
+	</fieldset>
+
+	<fieldset>
+		<legend id="q4"><b/>4. ¿En qué año surgió la compañía?</b></legend>
+
+		<input type="radio" name="option4" value="1" id="opc4">
+		<label for="opc4">a) 1932</label><br>
+
+		<input type="radio" name="option4" value="0" id="opc42">
+		<label for="opc42">b) 1940</label><br>
+
+		<input type="radio" name="option4" value="0" id="opc43">
+		<label for="opc43">c) 1967</label><br>
+
+	</fieldset>
+
+	<fieldset>
+		<legend id="q5"><b/>5. ¿Cuál es la pieza más producida?</b></legend>
+
+		<input type="radio" name="option5" value="0" id="opc5">
+		<label for="opc5">a) La minifigura</label><br>
+
+		<input type="radio" name="option5" value="1" id="opc52">
+		<label for="opc52">b) El ladrillo 2x4</label><br>
+
+		<input type="radio" name="option5" value="0" id="opc53">
+		<label for="opc53">c) El círculo de 1x1</label><br>
+
+	</fieldset>
+
+	<fieldset>
+		<legend id="q6"><b/>6. ¿Cuál es la primera franquicia cinematográfica con licencia que se produjo?</b></legend>
+
+		<input type="radio" name="option6" value="1" id="opc6">
+		<label for="opc6">a) Star Wars</label><br>
+
+		<input type="radio" name="option6" value="0" id="opc62">
+		<label for="opc62">b) Batman</label><br>
+
+		<input type="radio" name="option6" value="0" id="opc63">
+		<label for="opc63">c) Harry Potter</label><br>
+
+	</fieldset>
+
+	<fieldset>
+		<legend id="q7"><b/>7. ¿Cuál de estos juegos de Lego está (o estuvo) disponible sólo en computadoras?</b></legend>
+
+		<input type="radio" name="option7" value="0" id="opc7">
+		<label for="opc7">a) Lego Dimensions</label><br>
+
+		<input type="radio" name="option7" value="0" id="opc72">
+		<label for="opc72">b) Lego Star Wars: The Complete Saga</label><br>
+
+		<input type="radio" name="option7" value="1" id="opc73">
+		<label for="opc73">c) Lego Island </label><br>
+
+	</fieldset>
+
+	<fieldset>
+		<legend id="q8"><b/>8. ¿Cómo se llama el parque de atracciones de Lego?</b></legend>
+
+		<input type="radio" name="option8" value="0" id="opc8">
+		<label for="opc8">a) Legoworld</label><br>
+
+		<input type="radio" name="option8" value="1" id="opc82">
+		<label for="opc82">b) Legoland</label><br>
+
+		<input type="radio" name="option8" value="0" id="opc83">
+		<label for="opc83">c) Brickland</label><br>
+
+	</fieldset>
+
+	<fieldset>
+		<legend id="q9"><b/>9. ¿Qué significa MOC en la comunidad de Lego?</b></legend>
+
+		<input type="radio" name="option9" value="1" id="opc9">
+		<label for="opc9">a) Una construcción original (hecha sin instrucciones)</label><br>
+
+		<input type="radio" name="option9" value="0" id="opc92">
+		<label for="opc92">b) Una construcción descontinuada</label><br>
+
+		<input type="radio" name="option9" value="0" id="opc93">
+		<label for="opc93">c) Una construcción que usa piezas no oficiales</label><br>
+
+	</fieldset>
+
+	<fieldset>
+		<legend id="q10"><b/>10. ¿Qué línea está enfocada en robots complejos y programables?</b></legend>
+
+		<input type="radio" name="option10" value="0" id="opc10">
+		<label for="opc10">a) Technic</label><br>
+
+		<input type="radio" name="option10" value="0" id="opc102">
+		<label for="opc102">b) Education</label><br>
+
+		<input type="radio" name="option10" value="1" id="opc103">
+		<label for="opc103">c) Mindstorms</label><br>
+
+	</fieldset>
+	<button type="submit" onclick="generar(event);">Enviar resultados</button>
 	</form>
+	</div>
+	<div style="display: flex; justify-content: center; flex-shrink: 3;flex-direction: row; margin-left: 5px;">
+	<div id="chart_div"></div>
+	<div id="ResultadosPDF">
+		<iframe src="" frameborder="0" width="500" height="500"></iframe>
+	</div>
+	</div>
 	<div id="grafica"/>
 	<div id="resultados"/>
 

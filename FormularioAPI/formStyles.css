@@ -1,0 +1,26 @@
+body{
+    background-image: url(1010.png);
+    background-repeat: repeat;
+    background-blend-mode: lighten;
+    font-family: arial;
+}
+
+h1, h3{
+    background-color: rgb(233, 180, 34);
+    border-radius: 5px;
+    padding: 13px;
+    text-align: center;
+    width: 50vw;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 1px solid rgb(145, 96, 5);
+}
+
+form{
+    background-color: rgb(233, 180, 34);
+    border-radius: 5px;
+    padding: 13px;
+    margin: auto;
+    border: 1px solid rgb(145, 96, 5);
+}
