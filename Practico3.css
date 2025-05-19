@@ -1,0 +1,42 @@
+body{
+	
+	font-family: arial;
+	background-color: gainsboro;
+	text-align: center;
+	margin: auto;
+	margin-top: 6%;
+}
+
+h1{
+	background-color: chocolate;
+	color: floralwhite;
+	padding: 8px;
+	text-shadow: 2px 1px black;
+}
+
+#content{
+	margin-top: 4%;
+	background-color: #fcbd6f;
+	padding: 30px;
+	width: 20%;
+	margin: auto;
+	border-radius: 13px;
+	border: 3px solid sienna;
+}
+
+input{
+	margin: 8px;
+}
+#calculo{
+	margin-top: 6%;
+	padding: 3px;
+}
+
+#resultado{
+	margin-top: 20px;
+	background-color: white;
+	border: 1px solid black;
+	padding: 0px;
+	font-weight: bold;
+	border-radius: 4px;
+}
