@@ -116,6 +116,21 @@ function initLandbot() {
   }
 }
 </script>
+<style>
+    #enviar {
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transición suave */
+}
+
+#enviar:hover {
+    background-color: #6F826A; 
+    color: white;
+}
+</style>
     </head>
 
     <body>
@@ -138,10 +153,11 @@ function initLandbot() {
         </header>
         <br><br><br><br><br><br><br><br><br>
 
-        <div class="tituloCuadro" style="color: azure;width: 90vw; margin: auto;" >Encuesta diagnóstica de conocimiento financiero</div>
-        <div class="CuestionarioInstrucciones" style="color: azure;width: 70vw; margin: 10px 10%;" >Elige la respuesta que consideres correcta, una vez terminado se te proporcionará un comprobante PDF con tu resultado.¡Suerte!</div>
-
-    <form method="post" action="" enctype="text/plain" class="ContenidoCuestionario" style="margin: 10px 10%; line-height: 2em;">
+    <div class="iniciotexto" style="justify-content: space-between;">
+        <div class="tituloCuadro" style="color: azure;width: 90vw; margin: auto; margin-bottom: 20px;" >Encuesta diagnóstica de conocimiento financiero</div>
+        <div class="tituloCuadro" style="color: azure;width: 80vw; margin: auto; font-size: 16px;" >Elige la respuesta que consideres correcta, una vez terminado se te proporcionará un comprobante PDF con tu resultado.¡Suerte!</div>
+    </div>
+    <form method="post" action="" enctype="text/plain" class="ContenidoCuestionario" style="margin: 10px 10%; line-height: 2em; background-color: #a8e0a8; border-radius: 6px; padding: 0.7em 0.9em;">
 
                 <fieldset>
             <legend id="q1"><b/>1. ¿Qué es el interés compuesto?</b></legend>
@@ -282,7 +298,7 @@ function initLandbot() {
             <label for="opc103">c) La tasa anual que incluye intereses y cargos por financiamiento.</label><br>
 
         </fieldset>
-        <button type="submit" onclick="generar(event);">Enviar resultados</button>
+        <button id="enviar" type="submit" onclick="generar(event);">Enviar resultados</button>
     </form>
     </div>
     <div style="display: flex; justify-content: center; flex-shrink: 3;flex-direction: row">
