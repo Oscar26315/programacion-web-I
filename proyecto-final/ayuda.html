@@ -8,7 +8,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="styles.css" rel="stylesheet">
         <script src="scripts.js"></script>
-        <script>
+         <script>
 window.addEventListener('mouseover', initLandbot, { once: true });
 window.addEventListener('touchstart', initLandbot, { once: true });
 var myLandbot;
@@ -28,6 +28,19 @@ function initLandbot() {
   }
 }
 </script>
+
+<style>
+    h2{
+    background-color: rgb(37, 68, 104);
+    text-align: center;
+    border-radius: 10px;
+    color: white;
+    padding: 8px 15px; /* Ajusta estos valores según necesites */
+    margin: 10px 0; /* Espacio exterior opcional */
+    display: inline-block; /* Para que el fondo no ocupe todo el ancho */
+    width: auto; /* Ancho según contenido */
+    }
+</style>
     </head>
 
     <body>
@@ -41,39 +54,38 @@ function initLandbot() {
                 </div>
                 <div class="flex-menu" id="menu">
                     <a href="index.html">Inicio</a>
-                    <a href="acerca-de.html">Acerca de</a>
+                    <a href="acerca-de.html" >Acerca de</a>
                     <a href="servicio.html">Servicio</a>
                     <a href="ayuda.html" class="currentPage">Ayuda</a>
                     <a href="contacto.html">Contacto</a>
                 </div>
             </div>
         </header>
-        <div class="parte1">
-        <div class="tituloCuadro" style="position: absolute; top: 20%; left: 40%; color: azure; font-size: 1.7em; width: 20%;">
-            Preguntas frecuentes
-        </div>
-        <ul class="floating-list" style="transform: translateY(-20%);">
-            <li><div class="bloqueCuadro" id="faq1">
+
+
+        <ul class="floating-list" style="margin-top:10%;">
+            <h2>Preguntas frecuentes</h2>
+                
+                <li><div class="bloqueCuadro" id="mision">
                 <div class="tituloCuadro">¿Para qué clase de personas es este servicio?</div>
                 <div class="contenidoCuadro">
-                    Si quieres retirarte pronto, y tienes disposición a trabajar para ello, este servicio es para tí!
+                   Si quieres retirarte pronto, y tienes disposición a trabajar para ello, este servicio es para tí!
                 </div>
             </div></li>
-            <li><div class="bloqueCuadro" id="faq2">
+                <li><div class="bloqueCuadro" id="vision">
                 <div class="tituloCuadro">¿Necesito tener ahorros previos antes de venir?</div>
                 <div class="contenidoCuadro">
-                    Aunque lo mejor es empezar lo antes posible, nunca es demasiado tarde. Aquí te enseñaremos a ahorrar y gastar inteligentemente para que puedas cumplir tus sueños algún día!
-                </div>
+                   Aunque lo mejor es empezar lo antes posible, nunca es demasiado tarde. Aquí te enseñaremos a ahorrar y gastar inteligentemente para que puedas cumplir tus sueños algún día!
             </div></li>
-            <li><div class="bloqueCuadro" id="faq3">
+                <li><div class="bloqueCuadro" id="historia">
                 <div class="tituloCuadro">¿El cobro será un porcentaje de lo que gane?</div>
                 <div class="contenidoCuadro">
-                    Muchos asesores financieros cobran un porcentaje de las ganancias, en especial cuando se especializan en inversiones. Aquí no es así. El precio será fijo y por consulta (sin límite a cuantas necesites), así podrás quedarte con lo que ganes!
+                   Muchos asesores financieros cobran un porcentaje de las ganancias, en especial cuando se especializan en inversiones. Aquí no es así. El precio será fijo y por consulta (sin límite a cuantas necesites), así podrás quedarte con lo que ganes!
                 </div>
             </div></li>
+            
+              </ul>
 
-          </ul>
-        </div>
         <footer>
             <br>
             <a href="cuestionario.html">¡Te invitamos a visitar nuestro blog!</a>
