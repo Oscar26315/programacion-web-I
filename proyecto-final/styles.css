@@ -1,13 +1,15 @@
 /*Configuración básica*/
 body {
     font-family: sans-serif;
+    font-size: 16px;
     color: #333; 
+    overflow-x: hidden;
 }
 *{
     margin: 0px;
     padding: 0%;
     z-index: 2;
-    transition: transform 0.1s ease;
+    transition: transform 0.2s ease;
 }
 .container {
     position: relative;
@@ -25,29 +27,95 @@ p {
 }
 
 /*Cosas de la barra superior*/
-.barra-superior{
+.currentPage{
+    font-weight: bold;
+    text-shadow: 0px 0px 10px black ;
+}
+
+.barra-superior {
     display: flex;
+    justify-content: flex-end;
+    align-items: center;
     background-color: rgb(37, 68, 104);
     position: fixed;
-    padding: 2% 1%;
-    margin: 2%;
+    top: 0;
     width: 94%;
     max-width: 94%;
-    align-items: center;
-    justify-content: flex-end;
+    padding: 2% 1%;
+    margin: 2%;
     border-radius: 300px;
     z-index: 3;
-}
-.flex-menu{
+    transition: transform 0.3s ease;
+
+  }
+
+  .flex-menu {
     display: flex;
     justify-content: flex-end;
-}
-.flex-menu a{
+    gap: 6.5vw;
+    transition: transform 0.3s ease;
+    margin-right: 3%;
+  }
+
+  .flex-menu a {
     text-decoration: none;
-    margin-right: 6.5vw;
     font-size: 1.5rem;
     color: aliceblue;
-}
+    transition: transform 0.3s ease;
+
+  }
+
+  /* Botón hamburguesa */
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    margin-left: auto;
+  }
+
+  .menu-toggle span {
+    height: 3px;
+    width: 25px;
+    background: white;
+    margin: 4px 0;
+    border-radius: 2px;
+  }
+
+  /* Responsividad para móviles */
+  @media (max-width: 768px) {
+    html{
+        font-size: 14px;
+    }
+    .barra-superior {
+      flex-direction: column;
+      align-items: flex-end;
+      padding: 2% 1%;
+      border-radius: 20px;
+    }
+
+    .menu-toggle {
+      display: flex;
+      margin-right: 9px;
+    }
+
+    .flex-menu {
+      display: none;
+      flex-direction: column;
+      align-items: flex-end;
+      width: 100%;
+      margin-top: 1rem;
+    }
+
+    .flex-menu.active {
+      display: flex;
+    }
+
+    .flex-menu a {
+      margin: 0.7rem 0;
+      margin-right: 20px;
+    }
+  }
 /*Terminan cosas de la barra superior*/
 
 /*Partes. Index (pero puede usarse en otras secciones)*/
@@ -70,14 +138,14 @@ footer{
     height: auto;
     display: block;
     z-index: 0;
-    margin: none;
+    margin: 0;
     border-bottom: 3px solid rgb(37, 68, 104);
 }
 
 /*Título Index*/
 .title {
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 80%; /* Ajusta el ancho del contenido */
@@ -90,11 +158,20 @@ footer{
 
 /*Cuadros verdes. Usar ID para la posición de cada uno*/
 .bloqueCuadro{
+    text-align: center;
+    color: azure;
+    margin: 0;
+    font-family: sans-serif;
+    padding: none;
+    line-height: 1.5    em;
+    max-width: 50vw; /*Editar a 340px para dispositivos móviles!    */
+}
+.bloqueCuadroIndex{
     position: absolute;
     text-align: center;
     right: 10px;
     color: azure;
-    margin: none;
+    margin: 0;
     font-family: sans-serif;
     padding: none;
     line-height: 1.5    em;
@@ -128,9 +205,15 @@ footer{
 .mapa{
     align-items: center;
 }
+.mapa iframe {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+}
 
 /*Sección de preguntas frecuentes*/
-#faq1{
+/*#faq1{
     top: 45vh;
     right: 10vw;
     width: 30%;
@@ -144,7 +227,7 @@ footer{
     top: 95vh;
     right: 10vw;
     width: 30%;
-}
+}*/
 
 /*Lista Responsiva*/
 ul.floating-list {
@@ -169,6 +252,10 @@ ul.floating-list {
 
   /* Desktop layout */
   @media (min-width: 800px) {
+    .title{
+        top: 50%;
+    }
+
     ul.floating-list li {
       width: 60%;
     }

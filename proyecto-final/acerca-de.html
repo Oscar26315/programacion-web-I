@@ -7,16 +7,23 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="styles.css" rel="stylesheet">
+        <script src="scripts.js"></script>
+
     </head>
 
     <body>
         <header>
             <div class="barra-superior">
                 <!--logo-->
-                <div class="flex-menu">
+                <div class="menu-toggle" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="flex-menu" id="menu">
                     <a href="index.html">Inicio</a>
-                    <a href="acerca-de.html">Acerca de </a>
-                    <a href="servicio.html">Cuestionario</a>
+                    <a href="acerca-de.html" class="currentPage">Acerca de</a>
+                    <a href="servicio.html">Servicio</a>
                     <a href="ayuda.html">Ayuda</a>
                     <a href="contacto.html">Contacto</a>
                 </div>
@@ -27,25 +34,25 @@
             <div class="bloqueCuadro" id="mision">
                 <div class="tituloCuadro">Misión</div>
                 <div class="contenidoCuadro">
-                   Lorem ipsummmmm
+                   Nuestra misión es enseñar y ayudar a la gente que siempre ha querido ahorrar pero no sabe cómo; acompañándolos en el camino.
                 </div>
             </div>
             <div class="bloqueCuadro" id="vision">
                 <div class="tituloCuadro">Visión</div>
                 <div class="contenidoCuadro">
-                   Lorem ipsummmmmAAAA
+                   Queremos que nuestros clientes puedan algún día compartir las cosas que aprendieron con sus amigos y familiares, para así mejorar sus vidas también.
                 </div>
             </div>
             <div class="bloqueCuadro" id="historia">
                 <div class="tituloCuadro">Historia</div>
                 <div class="contenidoCuadro">
-                   Lorem ipsummmmm historia blah blahhh
+                   Esta empresa surgió en 2025, pero tenemos años de experiencia tanto en el ámbito financiero como en el de educación.
                 </div>
             </div>
             <div class="bloqueCuadro" id="escoger">
                 <div class="tituloCuadro">¿Por qué escogernos?</div>
                 <div class="contenidoCuadro">
-                   Lorem ipsummmmmñanañañma
+                   Nosotros podemos proveer un seguimiento más cercano que un asesor financiero normal, que sólo te dice qué hacer. Aquí aprenderás el porqué de las estrategias y cómo pueden ser perfectas para tí.
                 </div>
             </div>
             <img src="images/index2.jpg" alt="Imagen de Finanzas para ti" class="background-image">
@@ -64,7 +71,6 @@
             <a href="encuesta.html">Te invitamos a responder nuestra encuesta de satisfacción!</a>
             <br>
             <p>Página web desarrollada para la Materia de Programación Web I<br>Primavera 2025. Universidad Politécnica de San Luis Potosí</p>
-            Lorem ipsum xd
             <br>    
         </footer>
     </body>
