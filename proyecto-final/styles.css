@@ -273,3 +273,73 @@ ul.floating-list {
         font-size: medium;
     }
   }
+
+/* Estilos para el contenedor de redes */
+.redescont {
+    background-color: #f8f9fa;
+    border-radius: 15px;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 2rem auto;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    border-radius: 8px;
+}
+
+.redescont h2 {
+    color: #2c3e50;
+    font-size: 28px;
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+.redes{
+    flex: 1;
+    min-width: 300px;
+    margin-bottom: 1.5rem;
+}
+
+/* Estilos para la lista de redes */
+.redes ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 50%;
+    min-width: 300px;
+}
+
+.redes li {
+    margin-bottom: 0.8rem;
+    
+}
+
+.redes a {
+    text-decoration: none;
+    color: #3498db;
+    font-size: 18px;
+    display: block;
+    align-items: center;
+    padding: 0.8rem;
+    border-radius: 4px;
+    background-color: white;
+}
+
+.redes a:hover {
+    background-color: #3498db;
+    color: white;
+}
+
+/* Iconos para las redes sociales (usando pseudo-elementos) */
+.redes a::before {
+    content: "";
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
