@@ -70,22 +70,22 @@ function initLandbot() {
                 <fieldset style="padding-left: 2vw;">
                     <legend><b/>Información personal del solicitante</b></legend>
                     <label for="nombre"> Nombre(s): </label> <br/>
-                    <input type="text" placeholder="Nombre" name="nombre" id="nombre" autofocus>
+                    <input type="text" placeholder="Nombre" name="nombre" id="nombre" autofocus required>
                     <br>
                     <label for="apellidopat"> Apellido paterno: </label> <br/>
-                    <input type="text" placeholder="Apellido paterno" name="apellidopat" id="apellidopat" autofocus>
+                    <input type="text" placeholder="Apellido paterno" name="apellidopat" id="apellidopat" autofocus required>
                     <br>
                     <label for="apellidomat"> Apellido materno: </label> <br/>
-                    <input type="text" placeholder="Apellido materno" name="apellidomat" id="apellidomat" autofocus>
+                    <input type="text" placeholder="Apellido materno" name="apellidomat" id="apellidomat" autofocus required>
                     <br>
                     <label for="correo"> E-mail: </label> <br/>
-                    <input type="email" placeholder="E-mail" name="correo" id="correo" autofocus>
+                    <input type="email" placeholder="E-mail" name="correo" id="correo" autofocus required>
                     <br>
                     <label for="telefono"> Número celular de contacto: </label> <br/>
-                    <input type="tel" placeholder="Teléfono" name="telefono" id="telefono" autofocus>
+                    <input type="tel" placeholder="Teléfono" name="telefono" id="telefono" autofocus required>
                     <br>
                     <label for="tipo"> ¿Para qué tipo de persona es la asesoría?: </label> <br/>
-                    <input type="text" multiple name="tipo" id="tipo" list="tipopersona" autofocus>
+                    <input type="text" multiple name="tipo" id="tipo" list="tipopersona" autofocus required>
                     <datalist id="tipopersona">
                         <option value="Persona física"> (Persona individual)</option>
                         <option value="Persona moral"> (Empresa)</option>
